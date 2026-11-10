@@ -1,0 +1,158 @@
+/* Загальні стилі сторінки */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* Верхня панель залишається зверху під час прокручування */
+header {
+    text-align: center;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    position: sticky;
+    top: 48px;
+    background: #f9f9f9;
+    padding: 10px 0;
+    margin: 0 0 15px;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Секція 1: обтікання тексту */
+#section-1 img {
+    float: left;
+    margin: 0 20px 10px 0;
+    width: 125px;
+    height: 125px;
+}
+
+.text {
+    text-align: justify;
+    line-height: 1.45;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Секція 2: багатоколонковий текст */
+.multicolumn-text {
+    column-width: 300px;
+    column-gap: 20px;
+    column-rule: 1px solid #ddd;
+}
+
+.multicolumn-text p {
+    margin-top: 0;
+    break-inside: avoid;
+}
+
+/* Секція 3: кнопка підписки */
+#subscribe-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#subscribe-button:hover {
+    background-color: #45a049;
+}
+
+/* Модальне вікно */
+#modal.hidden {
+    display: none;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 55%;
+    min-height: 60%;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Налаштування для вузьких екранів */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 12px;
+    }
+
+    #section-1 img {
+        width: 100px;
+        height: 100px;
+        margin-right: 12px;
+    }
+
+    .modal-content {
+        width: 90%;
+        min-height: 50%;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+}
