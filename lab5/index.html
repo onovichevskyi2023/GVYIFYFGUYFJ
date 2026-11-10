@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5 — CSS Box Model</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="logos_container">
+        <div class="logos-inner">
+            <a class="university-logo" href="https://lpnu.ua/" aria-label="Львівська політехніка">
+                <div class="logo-symbol" aria-hidden="true">ЛП</div>
+                <div class="logo-text">
+                    <span class="logo-name">Львівська політехніка</span>
+                    <span class="logo-subtitle">Національний університет</span>
+                </div>
+            </a>
+
+            <div class="partner-logos">
+                <div class="partner-logo">
+                    <span class="partner-mark">1816</span>
+                    <span class="partner-caption">Засновано у Львові</span>
+                </div>
+                <div class="partner-logo college-logo">
+                    <span class="partner-mark">ФКІТ</span>
+                    <span class="partner-caption">Фаховий коледж<br>інформаційних технологій</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <p class="eyebrow">Лабораторна робота №5</p>
+        <h1>CSS. Робота з блочною моделлю</h1>
+        <p class="intro">Приклад використання HTML та CSS для відтворення блоку з логотипами Львівської політехніки.</p>
+        <section class="info-card">
+            <h2>Про роботу</h2>
+            <p>У цій роботі використано семантичний тег <code>header</code>, ідентифікатор <code>logos_container</code> та властивості CSS Box Model, CSS Fonts і CSS Color.</p>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>Лабораторна робота з дисципліни «Програмування в Internet»</p>
+    </footer>
+</body>
+</html>
