@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeamSpace — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Іконки Lucide для чистого мінімалістичного вигляду -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- ЛІВА ПАНЕЛЬ НАВІГАЦІЇ -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="logo">
+          <div class="logo-icon">
+            <i data-lucide="layers"></i>
+          </div>
+          <span class="logo-text">TeamSpace</span>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="#" class="nav-item active">
+            <i data-lucide="layout-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i data-lucide="users"></i>
+            <span>Team</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i data-lucide="briefcase"></i>
+            <span>Projects</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i data-lucide="calendar"></i>
+            <span>Calendar</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i data-lucide="file-text"></i>
+            <span>Documents</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i data-lucide="pie-chart"></i>
+            <span>Reports</span>
+          </a>
+        </nav>
+
+        <div class="teams-section">
+          <div class="section-label">Your teams</div>
+          <div class="team-list">
+            <a href="#" class="team-item">
+              <span class="team-badge">D</span>
+              <span>Design</span>
+            </a>
+            <a href="#" class="team-item">
+              <span class="team-badge">E</span>
+              <span>Engineering</span>
+            </a>
+            <a href="#" class="team-item">
+              <span class="team-badge">M</span>
+              <span>Marketing</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-bottom">
+        <a href="#" class="nav-item settings-btn">
+          <i data-lucide="settings"></i>
+          <span>Settings</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ОСНОВНИЙ КОНТЕНТ -->
+    <div class="main-wrapper">
+      <!-- ВЕРХНЯ ПАНЕЛЬ (HEADER) -->
+      <header class="topbar">
+        <div class="search-box">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" placeholder="Search tasks, projects, or team members...">
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" aria-label="Notifications">
+            <i data-lucide="bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+
+          <div class="divider"></div>
+
+          <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User avatar" class="user-avatar">
+            <span class="user-name">Olena Kovalenko</span>
+            <i data-lucide="chevron-down" class="chevron-icon"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- РОБОЧА ОБЛАСТЬ -->
+      <main class="content">
+        <!-- Заголовок сторінки та фільтри -->
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Dashboard</h1>
+            <p class="page-subtitle">Manage your team tasks, workflows, and project milestones</p>
+          </div>
+
+          <div class="header-controls">
+            <div class="avatar-group">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Member 1">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Member 2">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Member 3">
+              <span class="avatar-more">+4</span>
+            </div>
+
+            <button class="btn-outline">
+              <i data-lucide="sliders-horizontal"></i>
+              <span>Filters</span>
+            </button>
+
+            <button class="btn-primary">
+              <i data-lucide="plus"></i>
+              <span>New Task</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ВЕЛИКА КАРТКА-КОНТЕЙНЕР: Секція 1 -->
+        <section class="group-container">
+          <div class="group-header">
+            <div class="group-title-wrap">
+              <span class="status-indicator blue"></span>
+              <h2>Current Sprint & Active Tasks</h2>
+              <span class="count-badge">3</span>
+            </div>
+            <button class="more-btn"><i data-lucide="more-horizontal"></i></button>
+          </div>
+
+          <div class="cards-grid">
+            <!-- Картка 1 -->
+            <article class="task-card">
+              <div class="card-top">
+                <span class="tag tag-blue">Design</span>
+                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
+              </div>
+              <h3 class="card-title">Design System 2.0</h3>
+              <p class="card-desc">Update color tokens, typography scale, and core UI components in Figma.</p>
+              
+              <div class="progress-wrap">
+                <div class="progress-info">
+                  <span>Progress</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <div class="card-avatars">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="">
+                </div>
+                <div class="card-meta">
+                  <span><i data-lucide="message-square"></i> 8</span>
+                  <span><i data-lucide="calendar"></i> Nov 28</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Картка 2 -->
+            <article class="task-card">
+              <div class="card-top">
+                <span class="tag tag-purple">Engineering</span>
+                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
+              </div>
+              <h3 class="card-title">API Gateway Refactoring</h3>
+              <p class="card-desc">Optimize authentication middleware and reduce response latency across services.</p>
+
+              <div class="progress-wrap">
+                <div class="progress-info">
+                  <span>Progress</span>
+                  <span>45%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill purple" style="width: 45%;"></div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <div class="card-avatars">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="">
+                </div>
+                <div class="card-meta">
+                  <span><i data-lucide="message-square"></i> 14</span>
+                  <span><i data-lucide="calendar"></i> Dec 02</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Картка 3 -->
+            <article class="task-card">
+              <div class="card-top">
+                <span class="tag tag-amber">Marketing</span>
+                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
+              </div>
+              <h3 class="card-title">Q4 Product Launch</h3>
+              <p class="card-desc">Prepare landing page assets, press release kit, and social media schedule.</p>
+
+              <div class="progress-wrap">
+                <div class="progress-info">
+                  <span>Progress</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill green" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <div class="card-avatars">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="">
+                </div>
+                <div class="card-meta">
+                  <span><i data-lucide="message-square"></i> 5</span>
+                  <span><i data-lucide="calendar"></i> Nov 26</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ВЕЛИКА КАРТКА-КОНТЕЙНЕР: Секція 2 -->
+        <section class="group-container">
+          <div class="group-header">
+            <div class="group-title-wrap">
+              <span class="status-indicator amber"></span>
+              <h2>In Review & Quality Assurance</h2>
+              <span class="count-badge">2</span>
+            </div>
+            <button class="more-btn"><i data-lucide="more-horizontal"></i></button>
+          </div>
+
+          <div class="cards-grid">
+            <!-- Картка 4 -->
+            <article class="task-card">
+              <div class="card-top">
+                <span class="tag tag-green">QA & Testing</span>
+                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
+              </div>
+              <h3 class="card-title">Mobile Checkout Flow</h3>
+              <p class="card-desc">End-to-end testing for Apple Pay and Google Pay integrations on iOS/Android.</p>
+
+              <div class="card-footer">
+                <div class="card-avatars">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="">
+                </div>
+                <div class="card-meta">
+                  <span><i data-lucide="paperclip"></i> 3</span>
+                  <span><i data-lucide="calendar"></i> Nov 29</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Картка 5 -->
+            <article class="task-card">
+              <div class="card-top">
+                <span class="tag tag-blue">Research</span>
+                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
+              </div>
+              <h3 class="card-title">User Onboarding Interviews</h3>
+              <p class="card-desc">Synthesize findings from 12 customer interviews and highlight friction points.</p>
+
+              <div class="card-footer">
+                <div class="card-avatars">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="">
+                </div>
+                <div class="card-meta">
+                  <span><i data-lucide="message-square"></i> 11</span>
+                  <span><i data-lucide="calendar"></i> Dec 04</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
