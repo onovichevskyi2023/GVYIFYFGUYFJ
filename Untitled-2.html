@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Trivia — Company Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка сайту з навігаційним меню -->
+  <header>
+    <nav aria-label="Main navigation">
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#trivia">Trivia</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#scores">Scores</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Основний вміст сторінки -->
+  <main>
+
+    <!-- 3.5 Розділ Home -->
+    <section id="home">
+      <h1>Welcome to World Trivia</h1>
+      <p>
+        World Trivia is an interactive knowledge platform where curious minds test their intellect,
+        explore fascinating facts across science, history, and pop culture, and compete with players
+        from around the globe in daily brain challenges.
+      </p>
+    </section>
+
+    <!-- 3.6 Розділ Trivia -->
+    <section id="trivia">
+      <h2>Daily Trivia Highlights</h2>
+
+      <article class="trivia-item">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80" alt="View of planet Earth from space at night">
+        <div class="trivia-text">
+          <h3>Space &amp; Astronomy</h3>
+          <p>Did you know that a day on Venus is longer than a year on Venus? It takes Venus longer to rotate once on its axis than to complete one orbit of the Sun.</p>
+        </div>
+      </article>
+
+      <article class="trivia-item">
+        <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=300&q=80" alt="Ancient historical architectural ruins">
+        <div class="trivia-text">
+          <h3>Ancient History</h3>
+          <p>Oxford University is older than the Aztec Empire. Teaching existed at Oxford as early as 1096, whereas the Aztec civilization began around 1325.</p>
+        </div>
+      </article>
+
+      <article class="trivia-item">
+        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=300&q=80" alt="Laboratory glassware with scientific liquids">
+        <div class="trivia-text">
+          <h3>Nature &amp; Science</h3>
+          <p>Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still completely edible.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- 3.7 Розділ Categories -->
+    <section id="categories">
+      <h2>Trivia Categories</h2>
+      <ul class="categories-list">
+        <li><a href="#scores">Science &amp; Tech</a></li>
+        <li><a href="#scores">World History</a></li>
+        <li><a href="#scores">Geography</a></li>
+        <li><a href="#scores">Literature &amp; Art</a></li>
+        <li><a href="#scores">Cinema &amp; Music</a></li>
+        <li><a href="#scores">Sports</a></li>
+      </ul>
+    </section>
+
+    <!-- 3.8 Таблиця результатів (Scores) -->
+    <section id="scores">
+      <h2>Top Player Scores</h2>
+      <div class="table-wrapper">
+        <table class="scores-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Country</th>
+              <th>Category</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Olena Kovalenko</td>
+              <td>9,850</td>
+              <td>Ukraine</td>
+              <td>Science &amp; Tech</td>
+              <td>2025-05-12</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Liam O'Connor</td>
+              <td>9,420</td>
+              <td>Ireland</td>
+              <td>World History</td>
+              <td>2025-05-11</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Yuki Takahashi</td>
+              <td>9,190</td>
+              <td>Japan</td>
+              <td>Geography</td>
+              <td>2025-05-10</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Sofia Rossi</td>
+              <td>8,940</td>
+              <td>Italy</td>
+              <td>Literature &amp; Art</td>
+              <td>2025-05-09</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Lucas Meyer</td>
+              <td>8,710</td>
+              <td>Germany</td>
+              <td>Cinema &amp; Music</td>
+              <td>2025-05-08</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3.10 Розділ Subscribe -->
+    <section id="subscribe">
+      <h2>Daily Brain Teaser</h2>
+      <p>Get a fresh, mind-bending question delivered straight to your inbox every morning.</p>
+      <button type="button" class="subscribe-btn" aria-label="Subscribe to Puzzle of the Day">
+        Puzzle of the Day
+        <span class="sr-only"> — click to subscribe to daily trivia puzzles</span>
+      </button>
+    </section>
+
+    <!-- 3.9 Контактна форма -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Have a question, feedback, or a great trivia fact to share? Send us a message below.</p>
+      <form class="contact-form" action="#" method="post">
+        <label for="user-name">Name:</label>
+        <input type="text" id="user-name" name="name" placeholder="Enter your name" required>
+
+        <label for="user-email">Email:</label>
+        <input type="email" id="user-email" name="email" placeholder="Enter your email" required>
+
+        <label for="user-message">Message:</label>
+        <textarea id="user-message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Футер -->
+  <footer>
+    <p>&copy; 2025 World Trivia Company. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
