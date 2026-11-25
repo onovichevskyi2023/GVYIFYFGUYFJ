@@ -1,298 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TeamSpace — Dashboard</title>
+  <title>Новини університету — Національний університет «Львівська політехніка»</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Іконки Lucide для чистого мінімалістичного вигляду -->
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <div class="app-layout">
-    <!-- ЛІВА ПАНЕЛЬ НАВІГАЦІЇ -->
-    <aside class="sidebar">
-      <div class="sidebar-top">
-        <div class="logo">
-          <div class="logo-icon">
-            <i data-lucide="layers"></i>
-          </div>
-          <span class="logo-text">TeamSpace</span>
-        </div>
 
-        <nav class="nav-menu">
-          <a href="#" class="nav-item active">
-            <i data-lucide="layout-dashboard"></i>
-            <span>Dashboard</span>
-          </a>
-          <a href="#" class="nav-item">
-            <i data-lucide="users"></i>
-            <span>Team</span>
-          </a>
-          <a href="#" class="nav-item">
-            <i data-lucide="briefcase"></i>
-            <span>Projects</span>
-          </a>
-          <a href="#" class="nav-item">
-            <i data-lucide="calendar"></i>
-            <span>Calendar</span>
-          </a>
-          <a href="#" class="nav-item">
-            <i data-lucide="file-text"></i>
-            <span>Documents</span>
-          </a>
-          <a href="#" class="nav-item">
-            <i data-lucide="pie-chart"></i>
-            <span>Reports</span>
-          </a>
-        </nav>
-
-        <div class="teams-section">
-          <div class="section-label">Your teams</div>
-          <div class="team-list">
-            <a href="#" class="team-item">
-              <span class="team-badge">D</span>
-              <span>Design</span>
-            </a>
-            <a href="#" class="team-item">
-              <span class="team-badge">E</span>
-              <span>Engineering</span>
-            </a>
-            <a href="#" class="team-item">
-              <span class="team-badge">M</span>
-              <span>Marketing</span>
-            </a>
-          </div>
+  <!-- 1-й варіант: header#events_container (для 2-го змініть id на hero_container, для 3-го — featured_container) -->
+  <header id="events_container" class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="logo-emblem">ЛП</div>
+        <div class="brand-text">
+          <span class="uni-title">Національний університет «Львівська політехніка»</span>
+          <span class="uni-sub">Офіційний інформаційний портал</span>
         </div>
       </div>
 
-      <div class="sidebar-bottom">
-        <a href="#" class="nav-item settings-btn">
-          <i data-lucide="settings"></i>
-          <span>Settings</span>
-        </a>
-      </div>
-    </aside>
-
-    <!-- ОСНОВНИЙ КОНТЕНТ -->
-    <div class="main-wrapper">
-      <!-- ВЕРХНЯ ПАНЕЛЬ (HEADER) -->
-      <header class="topbar">
-        <div class="search-box">
-          <i data-lucide="search" class="search-icon"></i>
-          <input type="text" placeholder="Search tasks, projects, or team members...">
-        </div>
-
-        <div class="topbar-actions">
-          <button class="icon-btn" aria-label="Notifications">
-            <i data-lucide="bell"></i>
-            <span class="notification-dot"></span>
-          </button>
-
-          <div class="divider"></div>
-
-          <div class="user-profile">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User avatar" class="user-avatar">
-            <span class="user-name">Olena Kovalenko</span>
-            <i data-lucide="chevron-down" class="chevron-icon"></i>
-          </div>
-        </div>
-      </header>
-
-      <!-- РОБОЧА ОБЛАСТЬ -->
-      <main class="content">
-        <!-- Заголовок сторінки та фільтри -->
-        <div class="page-header">
-          <div>
-            <h1 class="page-title">Dashboard</h1>
-            <p class="page-subtitle">Manage your team tasks, workflows, and project milestones</p>
-          </div>
-
-          <div class="header-controls">
-            <div class="avatar-group">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Member 1">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Member 2">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Member 3">
-              <span class="avatar-more">+4</span>
-            </div>
-
-            <button class="btn-outline">
-              <i data-lucide="sliders-horizontal"></i>
-              <span>Filters</span>
-            </button>
-
-            <button class="btn-primary">
-              <i data-lucide="plus"></i>
-              <span>New Task</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- ВЕЛИКА КАРТКА-КОНТЕЙНЕР: Секція 1 -->
-        <section class="group-container">
-          <div class="group-header">
-            <div class="group-title-wrap">
-              <span class="status-indicator blue"></span>
-              <h2>Current Sprint & Active Tasks</h2>
-              <span class="count-badge">3</span>
-            </div>
-            <button class="more-btn"><i data-lucide="more-horizontal"></i></button>
-          </div>
-
-          <div class="cards-grid">
-            <!-- Картка 1 -->
-            <article class="task-card">
-              <div class="card-top">
-                <span class="tag tag-blue">Design</span>
-                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
-              </div>
-              <h3 class="card-title">Design System 2.0</h3>
-              <p class="card-desc">Update color tokens, typography scale, and core UI components in Figma.</p>
-              
-              <div class="progress-wrap">
-                <div class="progress-info">
-                  <span>Progress</span>
-                  <span>75%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 75%;"></div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="card-avatars">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="">
-                </div>
-                <div class="card-meta">
-                  <span><i data-lucide="message-square"></i> 8</span>
-                  <span><i data-lucide="calendar"></i> Nov 28</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Картка 2 -->
-            <article class="task-card">
-              <div class="card-top">
-                <span class="tag tag-purple">Engineering</span>
-                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
-              </div>
-              <h3 class="card-title">API Gateway Refactoring</h3>
-              <p class="card-desc">Optimize authentication middleware and reduce response latency across services.</p>
-
-              <div class="progress-wrap">
-                <div class="progress-info">
-                  <span>Progress</span>
-                  <span>45%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill purple" style="width: 45%;"></div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="card-avatars">
-                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="">
-                </div>
-                <div class="card-meta">
-                  <span><i data-lucide="message-square"></i> 14</span>
-                  <span><i data-lucide="calendar"></i> Dec 02</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Картка 3 -->
-            <article class="task-card">
-              <div class="card-top">
-                <span class="tag tag-amber">Marketing</span>
-                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
-              </div>
-              <h3 class="card-title">Q4 Product Launch</h3>
-              <p class="card-desc">Prepare landing page assets, press release kit, and social media schedule.</p>
-
-              <div class="progress-wrap">
-                <div class="progress-info">
-                  <span>Progress</span>
-                  <span>90%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill green" style="width: 90%;"></div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <div class="card-avatars">
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="">
-                </div>
-                <div class="card-meta">
-                  <span><i data-lucide="message-square"></i> 5</span>
-                  <span><i data-lucide="calendar"></i> Nov 26</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <!-- ВЕЛИКА КАРТКА-КОНТЕЙНЕР: Секція 2 -->
-        <section class="group-container">
-          <div class="group-header">
-            <div class="group-title-wrap">
-              <span class="status-indicator amber"></span>
-              <h2>In Review & Quality Assurance</h2>
-              <span class="count-badge">2</span>
-            </div>
-            <button class="more-btn"><i data-lucide="more-horizontal"></i></button>
-          </div>
-
-          <div class="cards-grid">
-            <!-- Картка 4 -->
-            <article class="task-card">
-              <div class="card-top">
-                <span class="tag tag-green">QA & Testing</span>
-                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
-              </div>
-              <h3 class="card-title">Mobile Checkout Flow</h3>
-              <p class="card-desc">End-to-end testing for Apple Pay and Google Pay integrations on iOS/Android.</p>
-
-              <div class="card-footer">
-                <div class="card-avatars">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="">
-                </div>
-                <div class="card-meta">
-                  <span><i data-lucide="paperclip"></i> 3</span>
-                  <span><i data-lucide="calendar"></i> Nov 29</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Картка 5 -->
-            <article class="task-card">
-              <div class="card-top">
-                <span class="tag tag-blue">Research</span>
-                <button class="card-menu"><i data-lucide="more-vertical"></i></button>
-              </div>
-              <h3 class="card-title">User Onboarding Interviews</h3>
-              <p class="card-desc">Synthesize findings from 12 customer interviews and highlight friction points.</p>
-
-              <div class="card-footer">
-                <div class="card-avatars">
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="">
-                </div>
-                <div class="card-meta">
-                  <span><i data-lucide="message-square"></i> 11</span>
-                  <span><i data-lucide="calendar"></i> Dec 04</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-      </main>
+      <nav class="header-nav">
+        <a href="#" class="nav-link active">Новини</a>
+        <a href="#" class="nav-link">Події</a>
+        <a href="#" class="nav-link">Оголошення</a>
+        <a href="#" class="nav-link">Вступникам</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <script>
-    lucide.createIcons();
-  </script>
+  <!-- Блок main з контейнером div.main-container -->
+  <main>
+    <div class="main-container">
+      <div class="section-head">
+        <h1 class="section-title">Новини університету</h1>
+        <a href="https://lpnu.ua/" target="_blank" class="all-news-link">Усі новини →</a>
+      </div>
+
+      <!-- Сітка новин на CSS Grid -->
+      <div class="news-grid">
+        <!-- Новина 1 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Зимова школа ІСМІ">
+          </div>
+          <div class="news-body">
+            <time class="news-date">25 ЛЮТ. 2026, 09:05</time>
+            <h2 class="news-title">
+              <a href="#">Студентка ІМФН Софія Гладун про участь у зимовій школі ІСМІ Constructive Approximation and Its Applications</a>
+            </h2>
+          </div>
+        </article>
+
+        <!-- Новина 2 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Лекція-презентація">
+          </div>
+          <div class="news-body">
+            <time class="news-date">24 ЛЮТ. 2026, 17:10</time>
+            <h2 class="news-title">
+              <a href="#">Лекція-презентація «Життя і проєкти архітектора Олександра Вартересевича в світлі нових досліджень»</a>
+            </h2>
+          </div>
+        </article>
+
+        <!-- Новина 3 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=600&q=80" alt="Фотовиставка">
+          </div>
+          <div class="news-body">
+            <time class="news-date">24 ЛЮТ. 2026, 14:58</time>
+            <h2 class="news-title">
+              <a href="#">У Львівській політехніці — фотовиставка «Андрій Парубій веде нас в бій!»</a>
+            </h2>
+          </div>
+        </article>
+
+        <!-- Новина 4 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80" alt="Допомога ЗСУ">
+          </div>
+          <div class="news-body">
+            <time class="news-date">24 ЛЮТ. 2026, 11:36</time>
+            <h2 class="news-title">
+              <a href="#">Центр гуманітарної допомоги Львівської політехніки передав автомобіль для потреб Збройних Сил України</a>
+            </h2>
+          </div>
+        </article>
+
+        <!-- Новина 5 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Науковці НДЛ-26">
+          </div>
+          <div class="news-body">
+            <time class="news-date">23 ЛЮТ. 2026, 17:07</time>
+            <h2 class="news-title">
+              <a href="#">Науковці НДЛ-26 Львівської політехніки створюють матеріали майбутнього для доріг України</a>
+            </h2>
+          </div>
+        </article>
+
+        <!-- Новина 6 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Олімпіада для школярів">
+          </div>
+          <div class="news-body">
+            <time class="news-date">23 ЛЮТ. 2026, 15:12</time>
+            <h2 class="news-title">
+              <a href="#">Затверджено календарний план ІІ туру олімпіади для школярів «Майбутнє з Політехнікою»</a>
+            </h2>
+          </div>
+        </article>
+
+        <!-- Новина 7 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Конференція TCSET-2026">
+          </div>
+          <div class="news-body">
+            <time class="news-date">23 ЛЮТ. 2026, 12:12</time>
+            <h2 class="news-title">
+              <a href="#">В Університеті відбулася міжнародна конференція з радіоелектроніки, телекомунікацій та комп'ютерної інженерії TCSET-2026</a>
+            </h2>
+          </div>
+        </article>
+
+        <!-- Новина 8 -->
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80" alt="Вечір пам'яті фотомитця">
+          </div>
+          <div class="news-body">
+            <time class="news-date">23 ЛЮТ. 2026, 10:30</time>
+            <h2 class="news-title">
+              <a href="#">Людина з фотокамерою: відбувся вечір пам'яті знаного фотомитця, викладача Політехніки Ярослава Данила</a>
+            </h2>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
 </body>
 </html>

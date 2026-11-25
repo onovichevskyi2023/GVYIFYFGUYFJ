@@ -1,0 +1,275 @@
+/* Базові скидання та змінні стилю Львівської політехніки */
+:root {
+  --lpnu-blue: #00468b;
+  --lpnu-dark: #002d5a;
+  --lpnu-accent: #f2a900;
+  --bg-light: #f4f6f9;
+  --text-main: #1a202c;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+/* Анімація появи блоків */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= HEADER (Flexbox) ================= */
+/* Спільні стилі для будь-якого з 3 варіантів id */
+header#events_container,
+header#hero_container,
+header#featured_container {
+  background: linear-gradient(135deg, var(--lpnu-dark) 0%, var(--lpnu-blue) 100%);
+  color: #ffffff;
+  padding: 16px 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-emblem {
+  width: 46px;
+  height: 46px;
+  background-color: var(--lpnu-accent);
+  color: var(--lpnu-dark);
+  font-weight: 800;
+  font-size: 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo-emblem:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.uni-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.uni-sub {
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* ================= MAIN & GRID ================= */
+.main-container {
+  max-width: 1280px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--lpnu-blue);
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--lpnu-dark);
+}
+
+.all-news-link {
+  color: var(--lpnu-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.all-news-link:hover {
+  color: var(--lpnu-accent);
+  transform: translateX(3px);
+}
+
+/* Базова сітка (Mobile First: до 767px — 1 колонка) */
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Картка новини + transitions + animations */
+.news-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+  animation: fadeInUp 0.5s ease backwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 70, 139, 0.14);
+  border-color: var(--lpnu-blue);
+}
+
+.news-img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.news-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.news-card:hover .news-img-wrap img {
+  transform: scale(1.07);
+}
+
+.news-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.news-date {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.news-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.news-title a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.news-card:hover .news-title a {
+  color: var(--lpnu-blue);
+}
+
+/* ================= МЕДІА-ЗАПИТИ (3 БРЕЙКПОІНТИ) ================= */
+
+/* 1. Mobile (мобільні пристрої): до 767px — 1 колонка */
+@media (max-width: 767px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .section-title {
+    font-size: 21px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 2. Tablet (планшети): 768px — 1023px — 2 колонки */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3. Desktop (настільні ПК і ноутбуки): 1024px і більше — 4 колонки */
+@media (min-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
